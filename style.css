@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    /* background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)); */
+    width: 100%;
+    height: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;
+}
+.logo{
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+.menu a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+.menu a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom:2px solid indianred ;
+    transition: 0.4s linear;
+}
+.menu a:hover::before{
+    width: 90%;
+}
+.register a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: indianred;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+.register a:hover{
+    background: transparent;
+    border: 1px solid indianred;
+}
+.wrapper{
+   /* background-size: cover; */
+   overflow-x: hidden;
+   overflow-y: auto;
+   height: 100vh;
+   perspective: 10px;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    height: 100%;
+    z-index: -1;
+}
+
+.background,.foreground{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.background{
+    transform: translateZ(-40px) scale(5);
+}
+.foreground{
+    transform: translateZ(-20px) scale(3);
+    
+}
+/* .background img{
+    height: 644px;
+    width: 1350px; 
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+}
+.foreground{
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+} */
+.text{
+    position: absolute;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%) ;
+    z-index: 1;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+/* .cont2 {
+    background-color: black;
+    color: white;
+    padding: 50px;
+}
+
+.cont2 h2 {
+    margin: 30px 0;
+    font-size:xx-large;
+}
+.cont3{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cont3 img{
+    position: absolute;
+    height: 550px;
+    width: 100%;
+    z-index: -1;
+    
+}
+
+.cont3 h2{
+    position: absolute;
+    font-size: xx-large;
+    color: rgb(83, 79, 79);
+    left: 45%;
+    top: 50px;
+    background-color: azure;
+}
+.cont4 {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    position: sticky;
+    top: 550px;
+    z-index: 1;
+}
+
+.cont4 h2 {
+    margin: 30px 0;
+    font-size:xx-large;
+} */
+section{
+    background-color: rgb(45,45,45);
+    color: white;
+    padding: 5rem 0;
+}
+
+section h2{
+    font-size: 2rem;
+    padding: 0 5rem;
+}
+
+.text2{
+    font-size: 1.2rem;
+    padding: 0 5rem;
+    margin: 3rem 0;
+}
+
+.desc{
+    position: relative;
+    background-color: white;
+    padding: 0.5rem 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: inline-block;
+    color: black;
+}
+
+.bg{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.bg1{
+    background-image: url(pexels-nur-andi-ravsanjani-gusma-89641.jpg);
+}
+
+.bg2{
+    background-image: url(pexels-pixabay-416676.jpg);
+}
+
+.bg3{
+    background-image: url(pexels-rodrigo-curi-5742880.jpg);
+}
